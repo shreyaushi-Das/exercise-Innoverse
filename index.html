@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innoverse Workouts</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Ybody {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,serif;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background:radial-gradient(rgb(229, 132, 80),black);
+
+  
+    }
+
+    
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  h1, h2, h3 {
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  
+  /* Header */
+  header {
+    background-image: url(assets/Innoverse\ logo\ light.jpg); /* Path to your image */
+    background-size: cover; /* Adjust image to cover the entire area */
+    background-position: right; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    color: white; /* Text color for better visibility */
+    h1{
+      color: rgb(0, 5, 61);
+    }
+    padding: 30px; /* Space inside the header */
+    text-align: center; /* Center align text */
+
+  }
+  
+  header h1 {
+    text-align: center;
+    margin: 0;
+  }
+  .dark-mode header h1{
+    color: rgb(0, 4, 45);
+  }
+  
+  header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  header nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    color: rgb(213, 241, 251);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  padding: 50px 0;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    color: rgb(0, 8, 101);
+    h1{
+      text-align: center;
+      color: rgb(0, 5, 61);
+    }
+    
+  }
+  .dark-mode #workouts{
+    background: radial-gradient(rgb(255, 245, 245),rgb(91, 88, 86));
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .project-card {
+    padding: 50px 0;
+    
+    background:radial-gradient(rgb(250, 181, 144),rgb(231, 145, 99),rgb(139, 60, 26));
+  }
+  .dark-mode .project-card{
+    background: radial-gradient(rgb(91, 88, 86),rgb(255, 245, 245));
+  }
+  
+  .project-card h3 {
+    margin-top: 0;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+
+  }
+
+  .project-card img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  /* Scroll Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dark Mode Styling */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode header, 
+.dark-mode footer, 
+.dark-mode .project-card {
+    background-color: #222;
+}
+     /* blogs Section */
+    /* Paste the entire CSS content you gave above inside this <style> tag */
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Neuro Wellness Workouts</h1>
+  </header>
+
+  <section id="workout-options" class="container">
+    <h2>Select a Workout Category</h2>
+    <div class="project-grid">
+      <button class="project-card" onclick="showWorkout('adhd')">ADHD</button>
+      <button class="project-card" onclick="showWorkout('autism')">Autism</button>
+      <button class="project-card" onclick="showWorkout('dyslexia')">Dyslexia</button>
+      <button class="project-card" onclick="showWorkout('other')">Others</button>
+    </div>
+  </section>
+
+  <!-- Workout Pages -->
+  <section id="adhd" class="workout-section container" style="display:none">
+    <h2>ADHD Workouts</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="assets/adhd-yoga.jpg" alt="Yoga for ADHD">
+        <h3>Yoga for Focus</h3>
+        <a href="https://www.youtube.com/watch?v=1" target="_blank">Watch</a>
+      </div>
+      <div class="project-card">
+        <img src="assets/adhd-dance.jpg" alt="Dance">
+        <h3>Dance Movement</h3>
+        <a href="https://www.youtube.com/watch?v=2" target="_blank">Watch</a>
+      </div>
+    </div>
+    <button onclick="goBack()">← Back</button>
+  </section>
+
+  <section id="autism" class="workout-section container" style="display:none">
+    <h2>Autism Workouts</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="assets/autism-stretch.jpg" alt="Stretching">
+        <h3>Stretch & Calm</h3>
+        <a href="https://www.youtube.com/watch?v=3" target="_blank">Watch</a>
+      </div>
+      <div class="project-card">
+        <img src="assets/autism-sensory.jpg" alt="Sensory Play">
+        <h3>Sensory Movement</h3>
+        <a href="https://www.youtube.com/watch?v=4" target="_blank">Watch</a>
+      </div>
+    </div>
+    <button onclick="goBack()">← Back</button>
+  </section>
+
+  <section id="dyslexia" class="workout-section container" style="display:none">
+    <h2>Dyslexia Workouts</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="assets/dyslexia-brain.jpg" alt="Brain Gym">
+        <h3>Brain Gym</h3>
+        <a href="https://www.youtube.com/watch?v=5" target="_blank">Watch</a>
+      </div>
+      <div class="project-card">
+        <img src="assets/dyslexia-cross.jpg" alt="Cross Crawl">
+        <h3>Cross Crawl</h3>
+        <a href="https://www.youtube.com/watch?v=6" target="_blank">Watch</a>
+      </div>
+    </div>
+    <button onclick="goBack()">← Back</button>
+  </section>
+
+  <section id="other" class="workout-section container" style="display:none">
+    <h2>Other Neuro Wellness Workouts</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="assets/other-breathing.jpg" alt="Breathing">
+        <h3>Breathing Exercises</h3>
+        <a href="https://www.youtube.com/watch?v=7" target="_blank">Watch</a>
+      </div>
+      <div class="project-card">
+        <img src="assets/other-balance.jpg" alt="Balance">
+        <h3>Balance Games</h3>
+        <a href="https://www.youtube.com/watch?v=8" target="_blank">Watch</a>
+      </div>
+    </div>
+    <button onclick="goBack()">← Back</button>
+  </section>
+
+  <script>
+    function showWorkout(type) {
+      document.getElementById("workout-options").style.display = "none";
+      document.querySelectorAll(".workout-section").forEach(section => section.style.display = "none");
+      document.getElementById(type).style.display = "block";
+    }
+
+    function goBack() {
+      document.querySelectorAll(".workout-section").forEach(section => section.style.display = "none");
+      document.getElementById("workout-options").style.display = "block";
+    }
+  </script>
+</body>
+</html>
